@@ -2,16 +2,30 @@
 
 Pentaho Mysql DB Market merupakan project penyimpanan basis data untuk Toko secara sistematis menggunakan database Mysql yang dibuat menggunakan Tools ETL Pentaho. Dan pada Mysql Database Market juga terdapat Store Procedure sebagai API
 
-## ETL Pentaho Process Design
+## ETL Pentaho Design Process
 
-![ETL Pentaho Process Design](./images/ETL%20Pentaho%20Process%20Design.png)
+### Create Table and Sample Data
+
+![Create Table and Sample Data](./images/etl%20pentaho%20-%20create%20table%20and%20sample%20data.png)
+
+### PL/SQL Module Product
+
+![PL/SQL Module Product](./images/etl%20pentaho%20-%20plsql%20module%20product.png)
+
+### PL/SQL Module Customer
+
+![PL/SQL Module Customer](./images/etl%20pentaho%20-%20plsql%20module%20customer.png)
+
+### PL/SQL Module Sales Order
+
+![PL/SQL Module Sales Order](./images/etl%20pentaho%20-%20plsql%20module%20sales%20order.png)
 
 ## Database
 
 ### Design
 
-![Database Design](./images/db%20design.png)
+![Design Database](./images/db%20-%20design.png)
 
-### PL/SQL (Store procedure)
+### PL/SQL
 
-![Database PL/SQL](./images/db%20plsql.png)
+![Database PL/SQL](./images/db%20-%20plsql.png)
