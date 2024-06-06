@@ -6,8 +6,9 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      # MYSQL_DATABASE: database
+      - MYSQL_DATABASE=pentaho_db_market
       - TZ=Asia/Jakarta
+
     ports:
       - "3303:3306"
     volumes:
