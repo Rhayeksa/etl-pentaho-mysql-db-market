@@ -6,6 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -436,7 +437,7 @@
   <notepads>
     <notepad>
       <note>Data Customer</note>
-      <xloc>256</xloc>
+      <xloc>288</xloc>
       <yloc>224</yloc>
       <width>99</width>
       <heigth>26</heigth>
@@ -457,7 +458,7 @@
     </notepad>
     <notepad>
       <note>Data Product</note>
-      <xloc>256</xloc>
+      <xloc>288</xloc>
       <yloc>48</yloc>
       <width>89</width>
       <heigth>26</heigth>
@@ -478,7 +479,7 @@
     </notepad>
     <notepad>
       <note>Data Sales Order</note>
-      <xloc>256</xloc>
+      <xloc>288</xloc>
       <yloc>400</yloc>
       <width>110</width>
       <heigth>26</heigth>
@@ -498,10 +499,10 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>PL/SQL</note>
-      <xloc>1008</xloc>
-      <yloc>48</yloc>
-      <width>54</width>
+      <note>PLSQL - Module Product</note>
+      <xloc>240</xloc>
+      <yloc>688</yloc>
+      <width>157</width>
       <heigth>26</heigth>
       <fontname>Ubuntu</fontname>
       <fontsize>10</fontsize>
@@ -519,10 +520,10 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Module Product</note>
-      <xloc>1200</xloc>
-      <yloc>48</yloc>
-      <width>108</width>
+      <note>PLSQL - Module Customer</note>
+      <xloc>928</xloc>
+      <yloc>688</yloc>
+      <width>167</width>
       <heigth>26</heigth>
       <fontname>Ubuntu</fontname>
       <fontsize>10</fontsize>
@@ -540,31 +541,10 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Module Customer</note>
-      <xloc>1488</xloc>
-      <yloc>48</yloc>
-      <width>118</width>
-      <heigth>26</heigth>
-      <fontname>Ubuntu</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>205</backgroundcolorgreen>
-      <backgroundcolorblue>112</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Module Sales Order</note>
-      <xloc>1776</xloc>
-      <yloc>48</yloc>
-      <width>129</width>
+      <note>PLSQL - Module Sales Order</note>
+      <xloc>304</xloc>
+      <yloc>1488</yloc>
+      <width>178</width>
       <heigth>26</heigth>
       <fontname>Ubuntu</fontname>
       <fontsize>10</fontsize>
@@ -747,16 +727,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - SalesOrderDeleteBySalesOrderId</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductGetAll</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Execute SQL script - create tables</from>
       <to>Data grid</to>
       <enabled>Y</enabled>
@@ -777,96 +747,246 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductGetById</to>
+      <from>Execute SQL script - drop ProductGetAll</from>
+      <to>Execute SQL script - create ProductGetAll</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductGetByName</to>
+      <from>Execute SQL script - drop ProductGetById</from>
+      <to>Execute SQL script - create ProductGetById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductGetByLikeName</to>
+      <from>Execute SQL script - drop ProductGetByName</from>
+      <to>Execute SQL script - create ProductGetByName</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductGetEmptyStock</to>
+      <from>Execute SQL script - drop ProductGetByLikeName</from>
+      <to>Execute SQL script - create ProductGetByLikeName</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductAddOne</to>
+      <from>Execute SQL script - drop ProductGetEmptyStock</from>
+      <to>Execute SQL script - create ProductGetEmptyStock</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductAddStockById</to>
+      <from>Execute SQL script - drop ProductAddOne</from>
+      <to>Execute SQL script - create ProductAddOne</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductEditOneById</to>
+      <from>Execute SQL script - drop ProductAddStockById</from>
+      <to>Execute SQL script - create ProductAddStockById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - ProductDeleteOneById</to>
+      <from>Execute SQL script - drop ProductEditOneById</from>
+      <to>Execute SQL script - create ProductEditOneById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerGetAll</to>
+      <from>Execute SQL script - drop ProductDeleteOneById</from>
+      <to>Execute SQL script - create ProductDeleteOneById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerGetById</to>
+      <from>Execute SQL script - drop CustomerGetAll</from>
+      <to>Execute SQL script - create CustomerGetAll</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerGetByName</to>
+      <from>Execute SQL script - drop CustomerGetById</from>
+      <to>Execute SQL script - create CustomerGetById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerGetByLikeName</to>
+      <from>Execute SQL script - drop CustomerGetByName</from>
+      <to>Execute SQL script - create CustomerGetByName</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerGetByGender</to>
+      <from>Execute SQL script - drop CustomerGetByLikeName</from>
+      <to>Execute SQL script - create CustomerGetByLikeName</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerAddOne</to>
+      <from>Execute SQL script - drop CustomerGetByGender</from>
+      <to>Execute SQL script - create CustomerGetByGender</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerEditOneById</to>
+      <from>Execute SQL script - drop CustomerAddOne</from>
+      <to>Execute SQL script - create CustomerAddOne</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - CustomerDeleteOneById</to>
+      <from>Execute SQL script - drop CustomerEditOneById</from>
+      <to>Execute SQL script - create CustomerEditOneById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - SalesOrderGetBySalesOrderId</to>
+      <from>Execute SQL script - drop CustomerDeleteOneById</from>
+      <to>Execute SQL script - create CustomerDeleteOneById</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Execute SQL script - Drop Procedures</from>
-      <to>Execute SQL script - SalesOrderAddOne</to>
+      <from>Execute SQL script - drop SalesOrderGetBySalesOrderId</from>
+      <to>Execute SQL script - create SalesOrderGetBySalesOrderId</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Execute SQL script - drop SalesOrderAddOne</from>
+      <to>Execute SQL script - create SalesOrderAddOne</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Execute SQL script - drop SalesOrderDeleteBySalesOrderId</from>
+      <to>Execute SQL script - create SalesOrderDeleteBySalesOrderId</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Add sequence</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>product_id</valuename>
+    <use_database>N</use_database>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence 2</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>customer_id</valuename>
+    <use_database>N</use_database>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence 3</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>sales_order_id</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Add sequence 4</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>sales_order_detail_id</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Data grid</name>
     <type>DataGrid</type>
@@ -957,142 +1077,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add sequence</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>product_id</valuename>
-    <use_database>N</use_database>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>product_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>price</name>
-        <rename/>
-      </field>
-      <field>
-        <name>stock</name>
-        <rename/>
-      </field>
-      <field>
-        <name>description</name>
-        <rename/>
-      </field>
-      <field>
-        <name>created_at</name>
-        <rename/>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema>pentaho_db_market</schema>
-    <table>products</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
+      <xloc>288</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1187,305 +1172,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add sequence 2</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>customer_id</valuename>
-    <use_database>N</use_database>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>customer_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>name</name>
-        <rename/>
-      </field>
-      <field>
-        <name>gender</name>
-        <rename/>
-      </field>
-      <field>
-        <name>address</name>
-        <rename/>
-      </field>
-      <field>
-        <name>is_member</name>
-        <rename/>
-      </field>
-      <field>
-        <name>created_at</name>
-        <rename/>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output 2</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema>pentaho_db_market</schema>
-    <table>customers</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get system info 2</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>created_at</name>
-        <type>system date (fixed)</type>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <type>system date (fixed)</type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get system info</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>created_at</name>
-        <type>system date (fixed)</type>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <type>system date (fixed)</type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - create tables</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>DROP TABLE IF EXISTS pentaho_db_market.customer_order_detail;
-DROP TABLE IF EXISTS pentaho_db_market.customer_order;
--- DROP TABLE IF EXISTS pentaho_db_market.customers;
--- DROP TABLE IF EXISTS pentaho_db_market.products;
-
-CREATE TABLE IF NOT EXISTS pentaho_db_market.products(
-  	product_id INT AUTO_INCREMENT UNIQUE NOT NULL
-  	, name VARCHAR(45) NOT NULL UNIQUE
-  	, price INT NOT NULL
-  	, stock INT NOT NULL
-  	, description TEXT
-  	, created_at DATETIME NOT NULL
-  	, updated_at DATETIME NOT NULL
-  	, deleted_at DATETIME
-	, PRIMARY KEY(product_id)
-);
-
-CREATE TABLE IF NOT EXISTS pentaho_db_market.customers(
-	customer_id INT AUTO_INCREMENT UNIQUE NOT NULL
-  	, name VARCHAR(45) NOT NULL
-  	, gender VARCHAR(6) NOT NULL
-  	, address TEXT NOT NULL
-  	, is_member BOOLEAN
-  	, created_at DATETIME NOT NULL
-  	, updated_at DATETIME NOT NULL
-  	, deleted_at DATETIME
-  	, PRIMARY KEY(customer_id)
-);
-
-CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order(
-	sales_order_id INT AUTO_INCREMENT UNIQUE NOT NULL
-	, customer_id INT NOT NULL
-	, grand_total_price INT NOT NULL
-	, created_at DATETIME NOT NULL
-	, updated_at DATETIME NOT NULL
-	, deleted_at DATETIME
-	, PRIMARY KEY(sales_order_id)
-	, FOREIGN KEY (customer_id) REFERENCES pentaho_db_market.customers(customer_id)
-);
-
-CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
-	sales_order_detail_id INT AUTO_INCREMENT UNIQUE NOT NULL
-	, sales_order_id INT NOT NULL
-	, product_id INT NOT NULL
-	, price INT NOT NULL
-	, quantity INT NOT NULL
-	, total_price INT NOT NULL
-	, created_at DATETIME NOT NULL
-	, updated_at DATETIME NOT NULL
-	, deleted_at DATETIME
-	, PRIMARY KEY(sales_order_detail_id)
-	, FOREIGN KEY (sales_order_id) REFERENCES pentaho_db_market.sales_order(sales_order_id)
-	, FOREIGN KEY (product_id) REFERENCES pentaho_db_market.products(product_id)
-);
-
-</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>64</xloc>
+      <xloc>288</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1550,169 +1237,7 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add sequence 3</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>sales_order_id</valuename>
-    <use_database>N</use_database>
-    <connection/>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get system info 3</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>created_at</name>
-        <type>system date (fixed)</type>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <type>system date (fixed)</type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>sales_order_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>customer_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>grand_total_price</name>
-        <rename/>
-      </field>
-      <field>
-        <name>created_at</name>
-        <rename/>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output 3</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema>pentaho_db_market</schema>
-    <table>sales_order</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
+      <xloc>288</xloc>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1836,181 +1361,7 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>544</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Add sequence 4</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <valuename>sales_order_detail_id</valuename>
-    <use_database>N</use_database>
-    <connection/>
-    <schema/>
-    <seqname>SEQ_</seqname>
-    <use_counter>Y</use_counter>
-    <counter_name/>
-    <start_at>1</start_at>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>544</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get system info 4</name>
-    <type>SystemInfo</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>created_at</name>
-        <type>system date (fixed)</type>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <type>system date (fixed)</type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>544</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 4</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>sales_order_detail_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>sales_order_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>product_id</name>
-        <rename/>
-      </field>
-      <field>
-        <name>price</name>
-        <rename/>
-      </field>
-      <field>
-        <name>quantity</name>
-        <rename/>
-      </field>
-      <field>
-        <name>total_price</name>
-        <rename/>
-      </field>
-      <field>
-        <name>created_at</name>
-        <rename/>
-      </field>
-      <field>
-        <name>updated_at</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>576</xloc>
-      <yloc>544</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output 4</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <schema>pentaho_db_market</schema>
-    <table>sales_order_detail</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>688</xloc>
+      <xloc>288</xloc>
       <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2035,7 +1386,7 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>832</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2060,7 +1411,7 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
+      <xloc>864</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2085,7 +1436,7 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
+      <xloc>864</xloc>
       <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2110,1552 +1461,13 @@ CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
+      <xloc>864</xloc>
       <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - ProductGetAll</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetAll(
-	IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			mysql_code = RETURNED_SQLSTATE, mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-
-	-- code
-	START TRANSACTION;
-	
-	IF _size &lt;= 0 OR _page &lt;= 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Size dan Page tidak boleh kurang dari 1' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL;
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-	END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-
-	SELECT
-		product_id
-		, name
-		, price
-		, stock
-		, description
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	ORDER BY product_id DESC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductGetById</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetById(
-	IN _id INT
-)
-proc:BEGIN
-	-- variabel
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND product_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Product dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'OK' AS message;
-   
-   SELECT
-		product_id
-		, name
-		, price
-		, stock
-		, description
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND product_id = _id;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductGetByName</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetByName(
-	IN _name VARCHAR(45)
-)
-proc:BEGIN
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND name = _name;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Product dengan nama tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-    END IF;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'OK' AS message;
-   
-   SELECT
-		product_id
-		, name
-		, price
-		, stock
-		, description
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND name = _name;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductGetByLikeName</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetByLikeName(
-	IN _name VARCHAR(45)
-	, IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	DECLARE v_total_page INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	IF _size &lt;= 0 OR _page &lt;= 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Size dan Page tidak boleh kurang dari 1' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND name LIKE CONCAT('%', _name , '%');
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-	END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-   
-	SELECT
-		product_id
-		, name
-		, price
-		, stock
-		, description
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND name LIKE CONCAT('%', _name , '%')
-	ORDER BY name ASC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductGetEmptyStock</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetEmptyStock(
-	IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel	
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	DECLARE v_total_page INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	SET v_total_data = (
-		SELECT COUNT(1)
-		FROM pentaho_db_market.products
-		WHERE deleted_at IS NULL
-		AND stock &lt; 1
-	);
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-    END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-
-   SELECT
-		product_id
-		, name
-		, price
-		, stock
-		, description
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND stock &lt; 1
-	ORDER BY name ASC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>432</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductAddOne</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductAddOne(
-	IN _name VARCHAR(45)
-	, IN _price INT
-	, IN _qty INT
-	, IN _description TEXT
-)
-proc:BEGIN
-	-- variabel	
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	IF _price &lt; 1 OR _qty &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad request' AS status
-			, 'Price dan Qty tidak boleh kurang dari 1!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND name = _name;
-
-	IF @checker > 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 409 AS code
-			, 'Conflict' AS status
-			, 'Produk dengan nama tersebut sudah ada!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-		END IF;
-		
-	INSERT INTO pentaho_db_market.products(name, price, stock, description, created_at, updated_at)
-	VALUES(_name, _price, _qty, _description, NOW(), NOW());
-
-	SELECT
-		NOW() AS datetime
-		, 201 AS code
-		, 'Created' AS status
-		, 'Produk berhasil ditambah!' AS message;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>512</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductAddStockById</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductAddStockById(
-	IN _id INT
-	, IN _qty INT
-)
-proc:BEGIN
-	-- variabel
-	DECLARE v_stock INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	IF _qty &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad request' AS status
-			, 'Qty tidak boleh kurang dari 1!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND product_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-    END IF;
-   
-   SET v_stock = _qty + (SELECT stock FROM pentaho_db_market.products WHERE product_id = _id);
-   
-   UPDATE pentaho_db_market.products
-   SET stock = v_stock
-   	   , updated_at = NOW()
-   WHERE product_id = _id;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'Stok berhasil ditambahkan!' AS message;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>592</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductEditOneById</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductEditOneById(
-	IN _id INT
-	, IN _name VARCHAR(45)
-	, IN _price INT
-	, IN _description TEXT
-)
-proc:BEGIN
-	-- variabel
-	DECLARE v_name VARCHAR(45);
-	DECLARE v_price INT;
-	DECLARE v_description TEXT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-
-	-- code
-	START TRANSACTION;
-	
-	IF _price &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad request' AS status
-			, 'Price tidak boleh kurang dari 1!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND product_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	ELSEIF @checker > 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 409 AS code
-			, 'Conflict' AS status
-			, 'Produk dengan id tersebut duplikat!' AS message;
-		ROLLBACK;
-		LEAVE proc;	
-	END IF;
-
-	SELECT name, price, description
-	INTO v_name, v_price, v_description
-	FROM pentaho_db_market.products
-	WHERE product_id = _id;
-
-	SET v_name = IFNULL(_name, v_name);
-	SET v_price = IFNULL(_price, v_price);
-	SET v_description = IFNULL(_description, v_description);
-
-	UPDATE pentaho_db_market.products
-	SET name = v_name
-		, price = v_price
-		, description = v_description
-		, updated_at = NOW()
-	WHERE product_id = _id
-	AND deleted_at IS NOT NULL;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'Produk dengan id tersebut berhasil diubah!' AS message;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>672</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - ProductDeleteOneById</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductDeleteOneById(
-	IN _id INT
-)
-proc:BEGIN
-	-- variabel
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.products
-	WHERE deleted_at IS NULL
-	AND product_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	ELSEIF @checker > 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 409 AS code
-			, 'Conflict' AS status
-			, 'Produk dengan id tersebut duplikat!' AS message;
-		ROLLBACK;
-		LEAVE proc;	
-    END IF;
-
-	UPDATE pentaho_db_market.products
-	SET deleted_at = NOW()
-	WHERE product_id = _id;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'Produk dengan id tersebut berhasil dihapus!' AS message;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
-      <yloc>752</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerGetAll</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetAll(
-	IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-
-	-- code
-	START TRANSACTION;
-	
-	IF _size &lt;= 0 OR _page &lt;= 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Size dan Page tidak boleh kurang dari 1' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL;
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-	END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-
-	SELECT
-		customer_id
-		, name
-		, gender
-		, address
-		, IF(is_member = 1, 'Yes', 'No') AS 'member'
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	ORDER BY customer_id DESC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerGetById</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetById(
-	IN _id INT
-)
-proc:BEGIN
-	-- variabel
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND customer_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Customer dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'OK' AS message;
-   
-   SELECT
-		customer_id
-		, name
-		, gender
-		, address
-		, IF(is_member = 1, 'Yes', 'No') AS 'member'
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND customer_id = _id;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerGetByName</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByName(
-	IN _name VARCHAR(45)
-)
-proc:BEGIN
-	-- variabel
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND name = _name;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Customer dengan nama tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-    END IF;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'OK' AS message;
-   
-   SELECT
-		customer_id
-		, name
-		, gender
-		, address
-		, IF(is_member = 1, 'Yes', 'No') AS 'member'
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND name = _name;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerGetByLikeName</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByLikeName(
-	IN _name VARCHAR(45)
-	, IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel	
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	DECLARE v_total_page INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	IF _size &lt;= 0 OR _page &lt;= 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Size dan Page tidak boleh kurang dari 1' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND name LIKE CONCAT('%', _name , '%');
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-	END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-   
-	SELECT
-		customer_id
-		, name
-		, gender
-		, address
-		, IF(is_member = 1, 'Yes', 'No') AS 'member'
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND name LIKE CONCAT('%', _name , '%')
-	ORDER BY name ASC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>352</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerGetByGender</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByGender(
-	IN _gender VARCHAR(6)
-	, IN _size INT
-	, IN _page INT
-)
-proc:BEGIN
-	-- variabel	
-	DECLARE v_offset INT;
-	DECLARE v_total_data INT;
-	DECLARE v_total_page INT;
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-	
-	-- code
-	START TRANSACTION;
-	
-	IF _gender NOT IN('Pria', 'Wanita') THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Gender hanya dapat diinput Pria atau Wanita' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	IF _size &lt;= 0 OR _page &lt;= 0 THEN
-		SELECT
-			NOW() AS datetime
-			, 400 AS code
-			, 'Bad Request' AS status
-			, 'Size dan Page tidak boleh kurang dari 1' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	END IF;
-
-	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND gender = _gender;
-
-	IF v_total_data &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 204 AS code
-			, 'No Content' AS status
-			, 'No Content' AS message;
-	ELSE
-		SELECT
-			NOW() AS datetime
-			, 200 AS code
-			, 'OK' AS status
-			, 'OK' AS message;		
-	END IF;
-
-	SET _size = IFNULL(_size, 10);
-	SET _page = IFNULL(_page, 1);
-	SET v_offset = (_page - 1) * _size;
-   
-	SELECT
-		customer_id
-		, name
-		, gender
-		, address
-		, IF(is_member = 1, 'Yes', 'No') AS 'member'
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND gender = _gender
-	ORDER BY name ASC
-	LIMIT _size
-	OFFSET v_offset;
-
-	SELECT
-		_size AS page_size
-		, v_total_data AS total_data
-		, CEIL(v_total_data / _size) AS total_page
-		, _page AS current_page;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>432</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - CustomerAddOne</name>
+    <name>Execute SQL script - create CustomerAddOne</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -3745,13 +1557,111 @@ END ;</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>512</yloc>
+      <xloc>1168</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - CustomerEditOneById</name>
+    <name>Execute SQL script - create CustomerDeleteOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerDeleteOneById(
+	IN _id INT
+)
+proc:BEGIN
+	-- variabel
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND customer_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Pelanggan dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	ELSEIF @checker > 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 409 AS code
+			, 'Conflict' AS status
+			, 'Pelanggan dengan id tersebut duplikat!' AS message;
+		ROLLBACK;
+		LEAVE proc;	
+    END IF;
+
+	UPDATE pentaho_db_market.customers
+	SET deleted_at = NOW()
+	WHERE customer_id = _id;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'Pelanggan dengan id tersebut berhasil dihapus!' AS message;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create CustomerEditOneById</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -3886,13 +1796,13 @@ END ;</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>592</yloc>
+      <xloc>1168</xloc>
+      <yloc>1216</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - CustomerDeleteOneById</name>
+    <name>Execute SQL script - create CustomerGetAll</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -3907,107 +1817,8 @@ END ;</sql>
     <single_statement>Y</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerDeleteOneById(
-	IN _id INT
-)
-proc:BEGIN
-	-- variabel
-	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
-	DECLARE mysql_msg TEXT;
-
-	DECLARE exit handler FOR SQLEXCEPTION
-	BEGIN
-		GET DIAGNOSTICS CONDITION 1
-			-- mysql_code = RETURNED_SQLSTATE;
-			mysql_msg = MESSAGE_TEXT;
-			SELECT
-				NOW() AS datetime
-				, 500 AS code
-				, 'Internal Server Error' AS status
-				, mysql_msg AS message;
-			ROLLBACK;
-			RESIGNAL;
-		ROLLBACK;
-	END;
-
-	-- code
-	START TRANSACTION;
-	
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.customers
-	WHERE deleted_at IS NULL
-	AND customer_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Pelanggan dengan id tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-	ELSEIF @checker > 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 409 AS code
-			, 'Conflict' AS status
-			, 'Pelanggan dengan id tersebut duplikat!' AS message;
-		ROLLBACK;
-		LEAVE proc;	
-    END IF;
-
-	UPDATE pentaho_db_market.customers
-	SET deleted_at = NOW()
-	WHERE customer_id = _id;
-
-	SELECT
-		NOW() AS datetime
-		, 200 AS code
-		, 'OK' AS status
-		, 'Pelanggan dengan id tersebut berhasil dihapus!' AS message;
-
-	COMMIT;
-END ;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1536</xloc>
-      <yloc>672</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Execute SQL script - SalesOrderGetBySalesOrderId</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>pentaho_conn_mysql_db_market</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>Y</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.SalesOrderGetBySalesOrderId(
-	IN _id INT
-	, IN _size INT
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetAll(
+	IN _size INT
 	, IN _page INT
 )
 proc:BEGIN
@@ -4045,25 +1856,9 @@ proc:BEGIN
 		LEAVE proc;
 	END IF;
 
-	SELECT COUNT(1) INTO @checker
-	FROM pentaho_db_market.sales_order
-	WHERE deleted_at IS NULL
-	AND sales_order_id = _id;
-
-	IF @checker &lt; 1 THEN
-		SELECT
-			NOW() AS datetime
-			, 404 AS code
-			, 'Not found' AS status
-			, 'Id customer order atau Kode order tersebut tidak ditemukan!' AS message;
-		ROLLBACK;
-		LEAVE proc;
-    END IF;
-
 	SELECT COUNT(1) INTO v_total_data
-	FROM pentaho_db_market.sales_order_detail
-	WHERE deleted_at IS NULL
-	AND sales_order_id = _id;
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL;
 
 	IF v_total_data &lt; 1 THEN
 		SELECT
@@ -4082,32 +1877,24 @@ proc:BEGIN
 	SET _size = IFNULL(_size, 10);
 	SET _page = IFNULL(_page, 1);
 	SET v_offset = (_page - 1) * _size;
-	
+
 	SELECT
-		co.sales_order_id AS kode_order
-		, c.name AS pelanggan
-		, IF(c.is_member = 1, 'Yes', 'No') AS 'member'
-		, p.name AS produk
-		, cod.price AS harga
-		, cod.quantity AS qty
-		, cod.total_price
-		, IFNULL(co.grand_total_price, 0) AS grand_total_harga
-	FROM pentaho_db_market.sales_order co
-	INNER JOIN pentaho_db_market.customers c ON c.customer_id = co.customer_id 
-	LEFT JOIN pentaho_db_market.sales_order_detail cod ON cod.sales_order_id = co.sales_order_id
-	INNER JOIN pentaho_db_market.products p ON p.product_id = cod.product_id 
-	WHERE co.sales_order_id = _id
-	ORDER BY p.name
+		customer_id
+		, name
+		, gender
+		, address
+		, IF(is_member = 1, 'Yes', 'No') AS 'member'
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	ORDER BY customer_id DESC
 	LIMIT _size
 	OFFSET v_offset;
 
-	IF NOT v_total_data &lt; 1 THEN
-		SELECT
-			_size AS page_size
-			, v_total_data AS total_data
-			, CEIL(v_total_data / _size) AS total_page
-			, _page AS current_page;
-	END IF;
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
 
 	COMMIT;
 END ;</sql>
@@ -4127,13 +1914,1434 @@ END ;</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>112</yloc>
+      <xloc>1168</xloc>
+      <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - SalesOrderAddOne</name>
+    <name>Execute SQL script - create CustomerGetByGender</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByGender(
+	IN _gender VARCHAR(6)
+	, IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel	
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	DECLARE v_total_page INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	IF _gender NOT IN('Pria', 'Wanita') THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Gender hanya dapat diinput Pria atau Wanita' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	IF _size &lt;= 0 OR _page &lt;= 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Size dan Page tidak boleh kurang dari 1' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO v_total_data
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND gender = _gender;
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+	END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+   
+	SELECT
+		customer_id
+		, name
+		, gender
+		, address
+		, IF(is_member = 1, 'Yes', 'No') AS 'member'
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND gender = _gender
+	ORDER BY name ASC
+	LIMIT _size
+	OFFSET v_offset;
+
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>1056</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create CustomerGetById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetById(
+	IN _id INT
+)
+proc:BEGIN
+	-- variabel
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND customer_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Customer dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'OK' AS message;
+   
+   SELECT
+		customer_id
+		, name
+		, gender
+		, address
+		, IF(is_member = 1, 'Yes', 'No') AS 'member'
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND customer_id = _id;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create CustomerGetByLikeName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByLikeName(
+	IN _name VARCHAR(45)
+	, IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel	
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	DECLARE v_total_page INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	IF _size &lt;= 0 OR _page &lt;= 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Size dan Page tidak boleh kurang dari 1' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO v_total_data
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND name LIKE CONCAT('%', _name , '%');
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+	END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+   
+	SELECT
+		customer_id
+		, name
+		, gender
+		, address
+		, IF(is_member = 1, 'Yes', 'No') AS 'member'
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND name LIKE CONCAT('%', _name , '%')
+	ORDER BY name ASC
+	LIMIT _size
+	OFFSET v_offset;
+
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create CustomerGetByName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.CustomerGetByName(
+	IN _name VARCHAR(45)
+)
+proc:BEGIN
+	-- variabel
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND name = _name;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Customer dengan nama tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+    END IF;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'OK' AS message;
+   
+   SELECT
+		customer_id
+		, name
+		, gender
+		, address
+		, IF(is_member = 1, 'Yes', 'No') AS 'member'
+	FROM pentaho_db_market.customers
+	WHERE deleted_at IS NULL
+	AND name = _name;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>896</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductAddOne</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductAddOne(
+	IN _name VARCHAR(45)
+	, IN _price INT
+	, IN _qty INT
+	, IN _description TEXT
+)
+proc:BEGIN
+	-- variabel	
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	IF _price &lt; 1 OR _qty &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad request' AS status
+			, 'Price dan Qty tidak boleh kurang dari 1!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND name = _name;
+
+	IF @checker > 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 409 AS code
+			, 'Conflict' AS status
+			, 'Produk dengan nama tersebut sudah ada!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+		END IF;
+		
+	INSERT INTO pentaho_db_market.products(name, price, stock, description, created_at, updated_at)
+	VALUES(_name, _price, _qty, _description, NOW(), NOW());
+
+	SELECT
+		NOW() AS datetime
+		, 201 AS code
+		, 'Created' AS status
+		, 'Produk berhasil ditambah!' AS message;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>1136</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductAddStockById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductAddStockById(
+	IN _id INT
+	, IN _qty INT
+)
+proc:BEGIN
+	-- variabel
+	DECLARE v_stock INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	IF _qty &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad request' AS status
+			, 'Qty tidak boleh kurang dari 1!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND product_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+    END IF;
+   
+   SET v_stock = _qty + (SELECT stock FROM pentaho_db_market.products WHERE product_id = _id);
+   
+   UPDATE pentaho_db_market.products
+   SET stock = v_stock
+   	   , updated_at = NOW()
+   WHERE product_id = _id;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'Stok berhasil ditambahkan!' AS message;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductDeleteOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductDeleteOneById(
+	IN _id INT
+)
+proc:BEGIN
+	-- variabel
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND product_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	ELSEIF @checker > 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 409 AS code
+			, 'Conflict' AS status
+			, 'Produk dengan id tersebut duplikat!' AS message;
+		ROLLBACK;
+		LEAVE proc;	
+    END IF;
+
+	UPDATE pentaho_db_market.products
+	SET deleted_at = NOW()
+	WHERE product_id = _id;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'Produk dengan id tersebut berhasil dihapus!' AS message;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductEditOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductEditOneById(
+	IN _id INT
+	, IN _name VARCHAR(45)
+	, IN _price INT
+	, IN _description TEXT
+)
+proc:BEGIN
+	-- variabel
+	DECLARE v_name VARCHAR(45);
+	DECLARE v_price INT;
+	DECLARE v_description TEXT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+
+	-- code
+	START TRANSACTION;
+	
+	IF _price &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad request' AS status
+			, 'Price tidak boleh kurang dari 1!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND product_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Produk dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	ELSEIF @checker > 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 409 AS code
+			, 'Conflict' AS status
+			, 'Produk dengan id tersebut duplikat!' AS message;
+		ROLLBACK;
+		LEAVE proc;	
+	END IF;
+
+	SELECT name, price, description
+	INTO v_name, v_price, v_description
+	FROM pentaho_db_market.products
+	WHERE product_id = _id;
+
+	SET v_name = IFNULL(_name, v_name);
+	SET v_price = IFNULL(_price, v_price);
+	SET v_description = IFNULL(_description, v_description);
+
+	UPDATE pentaho_db_market.products
+	SET name = v_name
+		, price = v_price
+		, description = v_description
+		, updated_at = NOW()
+	WHERE product_id = _id
+	AND deleted_at IS NOT NULL;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'Produk dengan id tersebut berhasil diubah!' AS message;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductGetAll</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetAll(
+	IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			mysql_code = RETURNED_SQLSTATE, mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+
+	-- code
+	START TRANSACTION;
+	
+	IF _size &lt;= 0 OR _page &lt;= 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Size dan Page tidak boleh kurang dari 1' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO v_total_data
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL;
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+	END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+
+	SELECT
+		product_id
+		, name
+		, price
+		, stock
+		, description
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	ORDER BY product_id DESC
+	LIMIT _size
+	OFFSET v_offset;
+
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>736</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductGetById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetById(
+	IN _id INT
+)
+proc:BEGIN
+	-- variabel
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND product_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Product dengan id tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'OK' AS message;
+   
+   SELECT
+		product_id
+		, name
+		, price
+		, stock
+		, description
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND product_id = _id;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductGetByLikeName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetByLikeName(
+	IN _name VARCHAR(45)
+	, IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	DECLARE v_total_page INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	IF _size &lt;= 0 OR _page &lt;= 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Size dan Page tidak boleh kurang dari 1' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO v_total_data
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND name LIKE CONCAT('%', _name , '%');
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+	END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+   
+	SELECT
+		product_id
+		, name
+		, price
+		, stock
+		, description
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND name LIKE CONCAT('%', _name , '%')
+	ORDER BY name ASC
+	LIMIT _size
+	OFFSET v_offset;
+
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductGetByName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetByName(
+	IN _name VARCHAR(45)
+)
+proc:BEGIN
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND name = _name;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Product dengan nama tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+    END IF;
+
+	SELECT
+		NOW() AS datetime
+		, 200 AS code
+		, 'OK' AS status
+		, 'OK' AS message;
+   
+   SELECT
+		product_id
+		, name
+		, price
+		, stock
+		, description
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND name = _name;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>896</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create ProductGetEmptyStock</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.ProductGetEmptyStock(
+	IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel	
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	DECLARE v_total_page INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+	
+	-- code
+	START TRANSACTION;
+	
+	SET v_total_data = (
+		SELECT COUNT(1)
+		FROM pentaho_db_market.products
+		WHERE deleted_at IS NULL
+		AND stock &lt; 1
+	);
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+    END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+
+   SELECT
+		product_id
+		, name
+		, price
+		, stock
+		, description
+	FROM pentaho_db_market.products
+	WHERE deleted_at IS NULL
+	AND stock &lt; 1
+	ORDER BY name ASC
+	LIMIT _size
+	OFFSET v_offset;
+
+	SELECT
+		_size AS page_size
+		, v_total_data AS total_data
+		, CEIL(v_total_data / _size) AS total_page
+		, _page AS current_page;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>1056</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create SalesOrderAddOne</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -4320,13 +3528,13 @@ END ;</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>192</yloc>
+      <xloc>576</xloc>
+      <yloc>1728</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - SalesOrderDeleteBySalesOrderId</name>
+    <name>Execute SQL script - create SalesOrderDeleteBySalesOrderId</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
@@ -4414,13 +3622,156 @@ END ;</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1840</xloc>
-      <yloc>272</yloc>
+      <xloc>576</xloc>
+      <yloc>1648</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Execute SQL script - Drop Procedures</name>
+    <name>Execute SQL script - create SalesOrderGetBySalesOrderId</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>Y</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>CREATE PROCEDURE IF NOT EXISTS pentaho_db_market.SalesOrderGetBySalesOrderId(
+	IN _id INT
+	, IN _size INT
+	, IN _page INT
+)
+proc:BEGIN
+	-- variabel
+	DECLARE v_offset INT;
+	DECLARE v_total_data INT;
+	-- DECLARE mysql_code CHAR(5) DEFAULT '00000';
+	DECLARE mysql_msg TEXT;
+
+	DECLARE exit handler FOR SQLEXCEPTION
+	BEGIN
+		GET DIAGNOSTICS CONDITION 1
+			-- mysql_code = RETURNED_SQLSTATE;
+			mysql_msg = MESSAGE_TEXT;
+			SELECT
+				NOW() AS datetime
+				, 500 AS code
+				, 'Internal Server Error' AS status
+				, mysql_msg AS message;
+			ROLLBACK;
+			RESIGNAL;
+		ROLLBACK;
+	END;
+
+	-- code
+	START TRANSACTION;
+	
+	IF _size &lt;= 0 OR _page &lt;= 0 THEN
+		SELECT
+			NOW() AS datetime
+			, 400 AS code
+			, 'Bad Request' AS status
+			, 'Size dan Page tidak boleh kurang dari 1' AS message;
+		ROLLBACK;
+		LEAVE proc;
+	END IF;
+
+	SELECT COUNT(1) INTO @checker
+	FROM pentaho_db_market.sales_order
+	WHERE deleted_at IS NULL
+	AND sales_order_id = _id;
+
+	IF @checker &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 404 AS code
+			, 'Not found' AS status
+			, 'Id customer order atau Kode order tersebut tidak ditemukan!' AS message;
+		ROLLBACK;
+		LEAVE proc;
+    END IF;
+
+	SELECT COUNT(1) INTO v_total_data
+	FROM pentaho_db_market.sales_order_detail
+	WHERE deleted_at IS NULL
+	AND sales_order_id = _id;
+
+	IF v_total_data &lt; 1 THEN
+		SELECT
+			NOW() AS datetime
+			, 204 AS code
+			, 'No Content' AS status
+			, 'No Content' AS message;
+	ELSE
+		SELECT
+			NOW() AS datetime
+			, 200 AS code
+			, 'OK' AS status
+			, 'OK' AS message;		
+	END IF;
+
+	SET _size = IFNULL(_size, 10);
+	SET _page = IFNULL(_page, 1);
+	SET v_offset = (_page - 1) * _size;
+	
+	SELECT
+		co.sales_order_id AS kode_order
+		, c.name AS pelanggan
+		, IF(c.is_member = 1, 'Yes', 'No') AS 'member'
+		, p.name AS produk
+		, cod.price AS harga
+		, cod.quantity AS qty
+		, cod.total_price
+		, IFNULL(co.grand_total_price, 0) AS grand_total_harga
+	FROM pentaho_db_market.sales_order co
+	INNER JOIN pentaho_db_market.customers c ON c.customer_id = co.customer_id 
+	LEFT JOIN pentaho_db_market.sales_order_detail cod ON cod.sales_order_id = co.sales_order_id
+	INNER JOIN pentaho_db_market.products p ON p.product_id = cod.product_id 
+	WHERE co.sales_order_id = _id
+	ORDER BY p.name
+	LIMIT _size
+	OFFSET v_offset;
+
+	IF NOT v_total_data &lt; 1 THEN
+		SELECT
+			_size AS page_size
+			, v_total_data AS total_data
+			, CEIL(v_total_data / _size) AS total_page
+			, _page AS current_page;
+	END IF;
+
+	COMMIT;
+END ;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>1552</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - create tables</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>N</distribute>
@@ -4435,31 +3786,61 @@ END ;</sql>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>-- Product
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetAll;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetById;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetByName;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetByLikeName;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetEmptyStock;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductAddOne;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductAddStockById;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductEditOneById;
-DROP PROCEDURE IF EXISTS pentaho_db_market.ProductDeleteOneById;
+    <sql>DROP TABLE IF EXISTS pentaho_db_market.customer_order_detail;
+DROP TABLE IF EXISTS pentaho_db_market.customer_order;
+-- DROP TABLE IF EXISTS pentaho_db_market.customers;
+-- DROP TABLE IF EXISTS pentaho_db_market.products;
 
--- Customer
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetAll;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetById;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByName;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByLikeName;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByGender;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerAddOne;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerEditOneById;
-DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerDeleteOneById;
+CREATE TABLE IF NOT EXISTS pentaho_db_market.products(
+  	product_id INT AUTO_INCREMENT UNIQUE NOT NULL
+  	, name VARCHAR(45) NOT NULL UNIQUE
+  	, price INT NOT NULL
+  	, stock INT NOT NULL
+  	, description TEXT
+  	, created_at DATETIME NOT NULL
+  	, updated_at DATETIME NOT NULL
+  	, deleted_at DATETIME
+	, PRIMARY KEY(product_id)
+);
 
--- Sales Order
-DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderGetBySalesOrderId;
-DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderAddOne;
-DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderDeleteBySalesOrderId;
+CREATE TABLE IF NOT EXISTS pentaho_db_market.customers(
+	customer_id INT AUTO_INCREMENT UNIQUE NOT NULL
+  	, name VARCHAR(45) NOT NULL
+  	, gender VARCHAR(6) NOT NULL
+  	, address TEXT NOT NULL
+  	, is_member BOOLEAN
+  	, created_at DATETIME NOT NULL
+  	, updated_at DATETIME NOT NULL
+  	, deleted_at DATETIME
+  	, PRIMARY KEY(customer_id)
+);
+
+CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order(
+	sales_order_id INT AUTO_INCREMENT UNIQUE NOT NULL
+	, customer_id INT NOT NULL
+	, grand_total_price INT NOT NULL
+	, created_at DATETIME NOT NULL
+	, updated_at DATETIME NOT NULL
+	, deleted_at DATETIME
+	, PRIMARY KEY(sales_order_id)
+	, FOREIGN KEY (customer_id) REFERENCES pentaho_db_market.customers(customer_id)
+);
+
+CREATE TABLE IF NOT EXISTS pentaho_db_market.sales_order_detail(
+	sales_order_detail_id INT AUTO_INCREMENT UNIQUE NOT NULL
+	, sales_order_id INT NOT NULL
+	, product_id INT NOT NULL
+	, price INT NOT NULL
+	, quantity INT NOT NULL
+	, total_price INT NOT NULL
+	, created_at DATETIME NOT NULL
+	, updated_at DATETIME NOT NULL
+	, deleted_at DATETIME
+	, PRIMARY KEY(sales_order_detail_id)
+	, FOREIGN KEY (sales_order_id) REFERENCES pentaho_db_market.sales_order(sales_order_id)
+	, FOREIGN KEY (product_id) REFERENCES pentaho_db_market.products(product_id)
+);
+
 </sql>
     <set_params>N</set_params>
     <insert_field/>
@@ -4477,8 +3858,1297 @@ DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderDeleteBySalesOrderId;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>96</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerAddOne</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerAddOne;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1136</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerDeleteOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerDeleteOneById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerEditOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerEditOneById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerGetAll</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetAll;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>736</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerGetByGender</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByGender;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>1056</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerGetById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerGetByLikeName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByLikeName;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop CustomerGetByName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.CustomerGetByName;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>832</xloc>
+      <yloc>896</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductAddOne</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductAddOne;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>1136</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductAddStockById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductAddStockById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>1216</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductDeleteOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductDeleteOneById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>1376</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductEditOneById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductEditOneById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>1296</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductGetAll</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetAll;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>736</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductGetById</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetById;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductGetByLikeName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetByLikeName;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>976</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductGetByName</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetByName;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>896</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop ProductGetEmptyStock</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.ProductGetEmptyStock;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>1056</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop SalesOrderAddOne</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderAddOne;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>1728</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop SalesOrderDeleteBySalesOrderId</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderDeleteBySalesOrderId;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>192</xloc>
+      <yloc>1648</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Execute SQL script - drop SalesOrderGetBySalesOrderId</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DROP PROCEDURE IF EXISTS pentaho_db_market.SalesOrderGetBySalesOrderId;
+</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>1552</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get system info</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>created_at</name>
+        <type>system date (fixed)</type>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
       <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get system info 2</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>created_at</name>
+        <type>system date (fixed)</type>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get system info 3</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>created_at</name>
+        <type>system date (fixed)</type>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get system info 4</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>created_at</name>
+        <type>system date (fixed)</type>
+      </field>
+      <field>
+        <name>updated_at</name>
+        <type>system date (fixed)</type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>product_id</name>
+      </field>
+      <field>
+        <name>name</name>
+      </field>
+      <field>
+        <name>price</name>
+      </field>
+      <field>
+        <name>stock</name>
+      </field>
+      <field>
+        <name>description</name>
+      </field>
+      <field>
+        <name>created_at</name>
+      </field>
+      <field>
+        <name>updated_at</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>customer_id</name>
+      </field>
+      <field>
+        <name>name</name>
+      </field>
+      <field>
+        <name>gender</name>
+      </field>
+      <field>
+        <name>address</name>
+      </field>
+      <field>
+        <name>is_member</name>
+      </field>
+      <field>
+        <name>created_at</name>
+      </field>
+      <field>
+        <name>updated_at</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>sales_order_id</name>
+      </field>
+      <field>
+        <name>customer_id</name>
+      </field>
+      <field>
+        <name>grand_total_price</name>
+      </field>
+      <field>
+        <name>created_at</name>
+      </field>
+      <field>
+        <name>updated_at</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>sales_order_detail_id</name>
+      </field>
+      <field>
+        <name>sales_order_id</name>
+      </field>
+      <field>
+        <name>product_id</name>
+      </field>
+      <field>
+        <name>price</name>
+      </field>
+      <field>
+        <name>quantity</name>
+      </field>
+      <field>
+        <name>total_price</name>
+      </field>
+      <field>
+        <name>created_at</name>
+      </field>
+      <field>
+        <name>updated_at</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>544</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema>pentaho_db_market</schema>
+    <table>products</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output 2</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema>pentaho_db_market</schema>
+    <table>customers</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output 3</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema>pentaho_db_market</schema>
+    <table>sales_order</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output 4</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>pentaho_conn_mysql_db_market</connection>
+    <schema>pentaho_db_market</schema>
+    <table>sales_order_detail</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
